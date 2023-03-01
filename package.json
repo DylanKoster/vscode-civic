@@ -1,0 +1,37 @@
+{
+  "name": "civic-tools",
+  "displayName": "CiviC",
+  "description": "Civilized C support for Visual Studio Code.",
+  "version": "0.5.0",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cvc",
+        "aliases": [
+          "CiviC",
+          "cvc"
+        ],
+        "extensions": [
+          ".cvc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cvc",
+        "scopeName": "source.cvc",
+        "path": "./syntaxes/cvc.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "nvm": "^0.0.4"
+  }
+}

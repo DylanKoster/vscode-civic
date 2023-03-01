@@ -1,0 +1,84 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "CiviC",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#modifier"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#identifiers"
+		}
+	],
+	"repository": {
+		"identifiers": {
+			"patterns": [
+				{
+					"match": "([^ (]+)[ \t]*\\(",
+					"name": "entity.name.function.cvc"
+				},
+				{
+					"match": "[A-Za-z][A-Za-z0-9_]*",
+					"name": "variable.parameter"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.conditional.cvc",
+				"match": "\\b(if|else|do|while|for|return)\\b"
+			},
+			{
+				"name": "keyword.control.import.cvc",
+				"match": "#include .*$"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "storage.type.cvc",
+				"match": "\\b(int|bool|void|float)\\b"
+			}]
+		},
+		"modifier": {
+			"patterns": [{
+				"name": "storage.modifier.cvc",
+				"match": "\\b(export|extern)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.cvc",
+				"match": "\/\/.*$"
+			},
+			{
+				"name": "comment.block.cvc",
+				"begin": "\/\\*",
+				"end": "\\*\/"
+			}]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.float",
+					"match": "[0-9]+(\\.[0-9]+)?[f|d]"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "[0-9]+"
+				}
+			]
+		}
+	},
+	"scopeName": "source.cvc"
+}
