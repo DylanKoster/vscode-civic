@@ -2,8 +2,9 @@
 
 All notable changes to the "civic-syntax-highlighting" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [0.5.0] - 2023-03-01
 
-- Initial release
+### Added
+- Syntax highlighting
+- Auto-closing brackets
